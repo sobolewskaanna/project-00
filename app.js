@@ -18,7 +18,7 @@ $(document).on('ready', function() {
             checkForWinner();
           } break;
         }
-        case 90: {
+        case 77: {
           if (p2Progress < 85) {
             p2Progress += 2;
             p2Percentage = p2Progress + '%';
