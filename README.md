@@ -12,7 +12,7 @@ Fully functional racing game using for two Players. The objective of the game is
 ## Instructions
 
 1. Player 1 moves across the DOM using the "M" key.
-1. Player 2 moves across the DOM using the "Z" key.
+1. Player 2 moves across the DOM using the "L" key.
 1. Reset track using "NEW ROUND" key.
 1. Start a new game using "NEW GAME" key.
 

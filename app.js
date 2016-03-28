@@ -22,7 +22,7 @@ $(document).on('ready', function() {
             checkForWinner();
           } break;
         }
-        case 90: { // Z key
+        case 76: { // Z key
           if (playerTwo.progress < 85) {
             playerTwo.progress += 2;
             $('#playerTwo').css( 'margin-left', playerTwo.percentage() );
