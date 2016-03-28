@@ -1,28 +1,31 @@
-var p1Progress = 0;
-var p2Progress = 0;
-var p1Percentage = 0;
-var p2Percentage = 0;
-var scorePlayerOne = 0;
-var scorePlayerTwo = 0;
+var playerOne = new Player();
+var playerTwo = new Player();
 var gameInProgress = true;
+
+function Player () {
+  this.progress = 0;
+  this.score = 0;
+
+  this.percentage = function () {
+    return this.progress + '%';
+  };
+}
 
 $(document).on('ready', function() {
   $(document).keydown(function(event) {
     if (gameInProgress === true) {
       switch (event.which) {
-        case 37: { // left arrow key
-          if (p1Progress < 85) {
-            p1Progress += 2;
-            p1Percentage = p1Progress + '%';
-            $('#playerOne').css( 'margin-left', p1Percentage );
+        case 37: { // M key
+          if (playerOne.progress < 85) {
+            playerOne.progress += 2;
+            $('#playerOne').css( 'margin-left', playerOne.percentage() );
             checkForWinner();
           } break;
         }
-        case 77: {
-          if (p2Progress < 85) {
-            p2Progress += 2;
-            p2Percentage = p2Progress + '%';
-            $('#playerTwo').css( 'margin-left', p2Percentage );
+        case 77: { // Z key
+          if (playerTwo.progress < 85) {
+            playerTwo.progress += 2;
+            $('#playerTwo').css( 'margin-left', playerTwo.percentage() );
             checkForWinner();
           } break;
         }
@@ -31,33 +34,33 @@ $(document).on('ready', function() {
   });
 
   function checkForWinner () {
-    if (p1Progress === 86) {
-      scorePlayerOne += 1;
+    if (playerOne.progress === 86) {
+      playerOne.score += 1;
       gameInProgress = false;
-      $('#playerOneScore').html(scorePlayerOne);
-    } else if (p2Progress === 86) {
-      scorePlayerTwo += 1;
+      $('#playerOneScore').html(playerOne.score);
+    } else if (playerTwo.progress === 86) {
+      playerTwo.score += 1;
       gameInProgress = false;
-      $('#playerTwoScore').html(scorePlayerTwo);
+      $('#playerTwoScore').html(playerTwo.score);
     }
   }
-
+  //start new game
   function newGame () {
-    p1Progress = 0;
-    p2Progress = 0;
+    playerOne.progress = 0;
+    playerTwo.progress = 0;
     gameInProgress = true;
     $('#playerOne').css( 'margin-left', '0%' );
     $('#playerTwo').css( 'margin-left', '0%' );
   }
-  //new game
+  //new game on clikc
   $('#newGameButton').on('click', function (event) {
     newGame();
   });
   //resets game
   $('#resetGameButton').on('click', function (event) {
     newGame();
-    scorePlayerOne = 0;
-    scorePlayerTwo = 0;
+    playerOne.score = 0;
+    playerTwo.score = 0;
     $('#playerOneScore').html('0');
     $('#playerTwoScore').html('0');
   });
