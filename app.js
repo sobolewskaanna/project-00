@@ -15,14 +15,14 @@ $(document).on('ready', function() {
   $(document).keydown(function(event) {
     if (gameInProgress === true) {
       switch (event.which) {
-        case 37: { // M key
+        case 77: { // M key
           if (playerOne.progress < 85) {
             playerOne.progress += 2;
             $('#playerOne').css( 'margin-left', playerOne.percentage() );
             checkForWinner();
           } break;
         }
-        case 77: { // Z key
+        case 90: { // Z key
           if (playerTwo.progress < 85) {
             playerTwo.progress += 2;
             $('#playerTwo').css( 'margin-left', playerTwo.percentage() );
