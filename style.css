@@ -1,0 +1,93 @@
+body {
+  background-image: url('images/background.jpg');
+  background-repeat: no-repeat;
+}
+
+.title {
+  background: url('images/MarioKart.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: auto;
+  height: 100px;
+  width: 300px;
+}
+
+.trackOne {
+  height: 100px;
+  width: 90%;
+  background-color: rgba(255,215,0,0.5);
+  margin-left: 5%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+#playerOne {
+  background: url('images/mario.png');
+  background-size: contain;
+  height: 100px;
+  width: 100px;
+  vertical-align: middle;
+  position: absolute;
+}
+
+.trackTwo {
+  height: 100px;
+  width: 90%;
+  background-color: rgba(255,215,0,0.5);
+  margin-left: 5%;
+  margin-bottom: 20px;
+  margin-top: 80px;
+}
+
+#playerTwo {
+  background: url('images/Luigi.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+  vertical-align: middle;
+  position: absolute;
+}
+
+.scoreBoard {
+  margin: auto;
+  background:#7f7f7f;
+  background:rgba(255,255,255,0.5);
+  width: 300px;
+}
+
+#mario {
+  background: url('images/MarioSMBW.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 10px;
+  height: 100px;
+  width: 150px;
+  float: left;
+}
+
+#luigi {
+  background: url('images/LuigiNSMBW.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 150px;
+}
+
+.btn.btn-default {
+  background-color: #FFCCFF;
+  text-align: center;
+}
+
+.scoreRow {
+  margin-top: 10px;
+  height: 30px;
+  text-align: center;
+}
+
+.row {
+  padding-top: 20px;
+}
