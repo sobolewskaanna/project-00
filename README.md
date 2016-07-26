@@ -1,6 +1,6 @@
 # Racing Game
 
-Fully functional racing game using for two Players. The objective of the game is to get each player across the DOM as quickly as possible by holding down a specific key.
+Fully functional racing game for two Players. The objective of the game is to get each player across the DOM as quickly as possible by holding down a specific key.
 
 ## Technologies Used
 * HTML
